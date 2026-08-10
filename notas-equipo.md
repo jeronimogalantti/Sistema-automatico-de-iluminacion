@@ -4,3 +4,4 @@ sistema automatico de iluminacion
 milton pozzo y matias Wanzenried 
 3 año segundo cuatrimestre
 ejercicios primera clase
+materia:IC2
