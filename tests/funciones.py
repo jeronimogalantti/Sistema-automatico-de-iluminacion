@@ -25,7 +25,7 @@ def obtener_dato(pelicula, clave):
 
 
 def leer_peliculas():
-    archivo = open("peliculas.csv", "r")
+    archivo = open("tests/peliculas.csv", "r")
 
     peliculas = []
 
@@ -47,3 +47,15 @@ def leer_peliculas():
     archivo.close()
 
     return peliculas
+
+
+def obtener_puntajes(peliculas):
+    puntajes = []
+
+    for pelicula in peliculas:
+        puntajes.append(pelicula["puntaje"])
+
+    return puntajes
+
+def ordenar_peliculas(peliculas):
+    return sorted(peliculas, key=lambda pelicula: pelicula["puntaje"], reverse=True)
