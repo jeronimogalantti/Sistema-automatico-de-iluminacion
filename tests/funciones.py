@@ -22,3 +22,28 @@ def estadisticas (notas):
 
 def obtener_dato(pelicula, clave):
     return pelicula.get(clave, "desconocido")
+
+
+def leer_peliculas():
+    archivo = open("peliculas.csv", "r")
+
+    peliculas = []
+
+    next(archivo)
+
+    for linea in archivo:
+        linea = linea.strip()
+        datos = linea.split(",")
+
+        pelicula = {
+            "titulo": datos[0],
+            "anio": int(datos[1]),
+            "puntaje": float(datos[2]),
+            "genero": datos[3]
+        }
+
+        peliculas.append(pelicula)
+
+    archivo.close()
+
+    return peliculas
