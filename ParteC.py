@@ -6,7 +6,7 @@ url = "http://127.0.0.1:8000/libros"
 try:
     respuesta = requests.get(
         "http://127.0.0.1:8000/libros",
-        timeout=1
+        
     )
 
     print(respuesta.status_code)
